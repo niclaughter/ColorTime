@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xe4-yn-5OO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CaviarDreams_Bold.ttf">
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Color Palette-->
+        <scene sceneID="4xA-Fn-zBM">
+            <objects>
+                <tableViewController id="kmB-XJ-2DZ" customClass="ColorListTableViewController" customModule="ColorTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="93H-6A-qgx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="colorCell" id="jch-kR-sbi">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jch-kR-sbi" id="cf6-H1-Th1">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="k0M-Te-7TG" kind="show" identifier="colorDetailSegue" id="xKG-QW-IW7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kmB-XJ-2DZ" id="gaO-LQ-kpC"/>
+                            <outlet property="delegate" destination="kmB-XJ-2DZ" id="XMk-dg-RUY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Color Palette" id="hof-t7-GOH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IJA-Wx-aIW">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="kmB-XJ-2DZ" id="4Q5-ui-EgO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fgq-vk-TUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331" y="393"/>
+        </scene>
+        <!--Color Detail View Controller-->
+        <scene sceneID="fQ6-6u-kIN">
+            <objects>
+                <viewController id="k0M-Te-7TG" customClass="ColorDetailViewController" customModule="ColorTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xqu-y1-Lqs"/>
+                        <viewControllerLayoutGuide type="bottom" id="4rW-YD-oRC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8fy-KE-fdK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaW-RE-DQL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fjn-6v-gnu">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7oS-c2-fzR">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="311"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6T9-o1-aaw">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkp-FP-hWd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="296" height="72"/>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="-2" height="1"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUf-2s-JcC">
+                                                        <rect key="frame" x="304" y="0.0" width="296" height="72"/>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="-2" height="1"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.3044719827586207" colorSpace="calibratedWhite"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vos-J5-Geb">
+                                                <rect key="frame" x="0.0" y="80" width="600" height="72"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBZ-YB-4GI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="296" height="72"/>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="-2" height="1"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo1-K8-yxm">
+                                                        <rect key="frame" x="304" y="0.0" width="296" height="72"/>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="-2" height="1"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.3044719827586207" colorSpace="calibratedWhite"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I3H-bG-peW">
+                                                <rect key="frame" x="0.0" y="160" width="600" height="72"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWJ-ua-wzo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="296" height="72"/>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="-2" height="1"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHz-pC-OoD">
+                                                        <rect key="frame" x="304" y="0.0" width="296" height="72"/>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="-2" height="1"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.3044719827586207" colorSpace="calibratedWhite"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oU5-cZ-y5i">
+                                                <rect key="frame" x="0.0" y="240" width="600" height="72"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hex:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX3-SX-8J1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="296" height="72"/>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="-2" height="1"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6R-Gc-FdA">
+                                                        <rect key="frame" x="304" y="0.0" width="296" height="72"/>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="-2" height="1"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.3044719827586207" colorSpace="calibratedWhite"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="I3H-bG-peW" secondAttribute="trailing" id="5au-lh-egc"/>
+                                            <constraint firstItem="I3H-bG-peW" firstAttribute="leading" secondItem="7oS-c2-fzR" secondAttribute="leading" id="HVs-ee-NHb"/>
+                                            <constraint firstItem="6T9-o1-aaw" firstAttribute="leading" secondItem="7oS-c2-fzR" secondAttribute="leading" id="KeI-xv-QZb"/>
+                                            <constraint firstItem="Vos-J5-Geb" firstAttribute="leading" secondItem="7oS-c2-fzR" secondAttribute="leading" id="MPJ-lS-Hk4"/>
+                                            <constraint firstItem="oU5-cZ-y5i" firstAttribute="leading" secondItem="7oS-c2-fzR" secondAttribute="leading" id="Pb6-S9-cuX"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vos-J5-Geb" secondAttribute="trailing" id="WzW-dK-c8j"/>
+                                            <constraint firstAttribute="trailing" secondItem="6T9-o1-aaw" secondAttribute="trailing" id="XKT-rq-CCx"/>
+                                            <constraint firstAttribute="trailing" secondItem="oU5-cZ-y5i" secondAttribute="trailing" id="c6p-1d-dmL"/>
+                                        </constraints>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="J6C-y3-M4F">
+                                        <rect key="frame" x="20" y="319" width="560" height="51"/>
+                                        <connections>
+                                            <action selector="sliderMoved:" destination="k0M-Te-7TG" eventType="valueChanged" id="t7R-TE-s7u"/>
+                                        </connections>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V4c-IX-Y4e">
+                                        <rect key="frame" x="0.0" y="377" width="600" height="68"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2M-DZ-Zm2">
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="68"/>
+                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="-2" height="1"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4c-vv-Tfn">
+                                                <rect key="frame" x="304" y="0.0" width="296" height="68"/>
+                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="-2" height="1"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.30447198279999999" colorSpace="calibratedWhite"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TmJ-jy-c5A">
+                                        <rect key="frame" x="175" y="453" width="251" height="84"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isk-YL-n3C">
+                                                <rect key="frame" x="0.0" y="21" width="194" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="Nau-Yl-saJ"/>
+                                                    <constraint firstAttribute="width" constant="194" id="U2D-yO-fwF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="32"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="-2" height="1"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Cg-Ig-6o3">
+                                                <rect key="frame" x="202" y="26" width="51" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="49" id="Av3-q7-XPe"/>
+                                                    <constraint firstAttribute="height" constant="31" id="W9j-lF-VmX"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="backgroundSwitchToggled:" destination="k0M-Te-7TG" eventType="valueChanged" id="A86-K7-Enq"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="V4c-IX-Y4e" firstAttribute="leading" secondItem="fjn-6v-gnu" secondAttribute="leading" id="6re-VI-EcQ"/>
+                                    <constraint firstItem="7oS-c2-fzR" firstAttribute="leading" secondItem="fjn-6v-gnu" secondAttribute="leading" id="Be0-SV-ct0"/>
+                                    <constraint firstAttribute="trailing" secondItem="V4c-IX-Y4e" secondAttribute="trailing" id="Mjc-uW-rjh"/>
+                                    <constraint firstItem="J6C-y3-M4F" firstAttribute="leading" secondItem="fjn-6v-gnu" secondAttribute="leading" constant="22" id="dFR-r0-uBl"/>
+                                    <constraint firstAttribute="trailing" secondItem="7oS-c2-fzR" secondAttribute="trailing" id="f9a-hT-BOv"/>
+                                    <constraint firstAttribute="trailing" secondItem="J6C-y3-M4F" secondAttribute="trailing" constant="22" id="iUp-6E-svT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4rW-YD-oRC" firstAttribute="top" secondItem="OaW-RE-DQL" secondAttribute="bottom" id="0g0-9b-duE"/>
+                            <constraint firstItem="4rW-YD-oRC" firstAttribute="top" secondItem="fjn-6v-gnu" secondAttribute="bottom" id="4In-WV-qbC"/>
+                            <constraint firstAttribute="trailing" secondItem="fjn-6v-gnu" secondAttribute="trailing" id="Fe5-fP-Pht"/>
+                            <constraint firstAttribute="trailing" secondItem="OaW-RE-DQL" secondAttribute="trailing" id="V2G-UG-rl7"/>
+                            <constraint firstItem="fjn-6v-gnu" firstAttribute="top" secondItem="Xqu-y1-Lqs" secondAttribute="bottom" id="f3N-xQ-rr1"/>
+                            <constraint firstItem="fjn-6v-gnu" firstAttribute="leading" secondItem="8fy-KE-fdK" secondAttribute="leading" id="hI2-36-ZuB"/>
+                            <constraint firstItem="OaW-RE-DQL" firstAttribute="leading" secondItem="8fy-KE-fdK" secondAttribute="leading" id="kIP-Hv-ikv"/>
+                            <constraint firstItem="OaW-RE-DQL" firstAttribute="top" secondItem="Xqu-y1-Lqs" secondAttribute="bottom" constant="-64" id="qZv-xn-L7B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alpha" destination="U2M-DZ-Zm2" id="2zV-5O-gfv"/>
+                        <outlet property="alphaLabel" destination="C4c-vv-Tfn" id="k54-um-eG1"/>
+                        <outlet property="background" destination="Isk-YL-n3C" id="M1s-AX-tIK"/>
+                        <outlet property="backgroundSwitch" destination="1Cg-Ig-6o3" id="knJ-al-3cf"/>
+                        <outlet property="blue" destination="dWJ-ua-wzo" id="nWr-kF-NKf"/>
+                        <outlet property="blueLabel" destination="wHz-pC-OoD" id="XET-tw-7kY"/>
+                        <outlet property="colorView" destination="OaW-RE-DQL" id="pW0-xu-JLJ"/>
+                        <outlet property="green" destination="hBZ-YB-4GI" id="LxF-d2-Ssx"/>
+                        <outlet property="greenLabel" destination="eo1-K8-yxm" id="xvz-ML-evZ"/>
+                        <outlet property="hex" destination="OX3-SX-8J1" id="GGG-yK-yKF"/>
+                        <outlet property="hexLabel" destination="T6R-Gc-FdA" id="J5L-wb-tH8"/>
+                        <outlet property="red" destination="bkp-FP-hWd" id="64I-FE-ViT"/>
+                        <outlet property="redLabel" destination="mUf-2s-JcC" id="h7l-Fe-DRx"/>
+                        <outlet property="slider" destination="J6C-y3-M4F" id="TuK-en-p9T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSe-zG-a3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2043" y="393"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cKq-ht-s5R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xe4-yn-5OO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V6k-J5-dim">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kmB-XJ-2DZ" kind="relationship" relationship="rootViewController" id="w2A-7J-ay2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yiD-g6-udJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="393"/>
+        </scene>
+    </scenes>
+</document>
